@@ -1,0 +1,45 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add morning show to schedule",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "summary": "Create a new show entry for a morning show with ID, title, description, and optional image",
+      "acceptanceCriteria": [
+        "A new show is created in the backend shows stable variable",
+        "The show appears in the ShowManagement component in the admin dashboard",
+        "The show appears as an option in the AddScheduleDialog show selection dropdown"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdminDashboard.tsx",
+          "operation": "modify",
+          "description": "Use the AddShowDialog component to create a new morning show. Fill in the form fields: ID (e.g., 'morning-show'), title (e.g., 'Country Morning Show'), description (e.g., 'Start your day with country classics and local news'), and upload the generated morning show banner image from frontend/public/assets/generated/morning-show-banner.dim_800x400.png. The dialog already handles ExternalBlob conversion and backend submission via the useAddShow mutation hook."
+        },
+        {
+          "path": "frontend/public/assets/generated/morning-show-banner.dim_800x400.png",
+          "operation": "create",
+          "description": "Wire the generated morning show promotional banner with sunrise theme and radio microphone into the frontend as a static asset at this path. This image will be uploaded when creating the morning show through the AddShowDialog."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add a weekday morning schedule entry for the new morning show with appropriate time slot (e.g., 6:00 AM - 10:00 AM)",
+      "acceptanceCriteria": [
+        "Schedule entries are created for Monday through Friday in the backend schedules stable variable",
+        "The morning show schedule appears in the ScheduleView component on the homepage",
+        "The schedule displays in the correct day-of-week columns with formatted time ranges",
+        "The schedule entries appear in the ScheduleManagement component in the admin dashboard"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdminDashboard.tsx",
+          "operation": "modify",
+          "description": "Use the AddScheduleDialog component to create five schedule entries (one for each weekday: Monday through Friday). For each day: select the newly created morning show from the show dropdown, set start time to 6:00 AM and end time to 10:00 AM. The dialog already handles BigInt conversion for time values (startTime and endTime) and backend submission via the useAddSchedule mutation hook. The ScheduleView and ScheduleManagement components will automatically display these entries once created, as they fetch all schedules using useGetAllSchedules."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "build_request",
+  "title": "Add morning show to schedule",
+  "projectName": "Country Radio Channel",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "text": "Create a new show entry for a morning show with ID, title, description, and optional image",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "add a morning show"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new show is created in the backend shows stable variable",
+        "The show appears in the ShowManagement component in the admin dashboard",
+        "The show appears as an option in the AddScheduleDialog show selection dropdown"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a weekday morning schedule entry for the new morning show with appropriate time slot (e.g., 6:00 AM - 10:00 AM)",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "add a morning show"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Schedule entries are created for Monday through Friday in the backend schedules stable variable",
+        "The morning show schedule appears in the ScheduleView component on the homepage",
+        "The schedule displays in the correct day-of-week columns with formatted time ranges",
+        "The schedule entries appear in the ScheduleManagement component in the admin dashboard"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use the existing show and schedule data structures defined in backend/main.mo",
+    "Follow the existing CRUD patterns for shows and schedules",
+    "Use BigInt format for time values (hours and minutes) as implemented in existing schedule dialogs",
+    "Maintain the single-actor architecture in backend/main.mo"
+  ],
+  "nonGoals": [
+    "Modifying the existing weekend schedule with Mark Huotari",
+    "Changing the schedule display format or layout",
+    "Adding automation for schedule creation",
+    "Implementing recurring schedule templates"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Morning show promotional banner with sunrise theme and radio microphone (morning-show-banner.dim_800x400.png)"
+    ],
+    "edits": []
+  }
+}

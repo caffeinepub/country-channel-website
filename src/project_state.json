@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Morning show promotional banner with sunrise theme and radio microphone (morning-show-banner.dim_800x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-new-show-entry-for-a-morning-show-with-id-title-description-and-optional-image",
+      "title": "Create a new show entry for a morning show with ID, title, description, and optional image",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add weekends with Mark Huotari 2pm-7pm CST to schedule",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a new show entry for 'Weekends with Mark Huotari' if it doesn't already exist",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add schedule entries for Saturday and Sunday from 2:00 PM to 7:00 PM CST for the 'Weekends with Mark Huotari' show",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Display the new weekend schedule entries in the ScheduleView component on the homepage",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add a morning show to the schedule",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a weekday morning schedule entry for the new morning show with appropriate time slot (e.g., 6:00 AM - 10:00 AM)",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Country Channel",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

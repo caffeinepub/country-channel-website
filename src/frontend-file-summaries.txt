@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component that handles authentication state, profile setup, and toggles between public homepage and admin dashboard based on user role.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for all backend operations including user profiles, shows, and schedules with proper cache invalidation.",
+  "frontend/src/components/Header.tsx": "Sticky header component with channel logo, authentication controls, and admin dashboard toggle for authorized users.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and caffeine.ai attribution link.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time user profile creation requiring name input before accessing the application.",
+  "frontend/src/pages/HomePage.tsx": "Public-facing homepage with radio banner at top, hero section, \"Now Playing\" section with embedded Live365 player, \"Recently Played\" section with embedded Live365 recently played iframe, and tabbed interface for browsing shows and viewing weekly schedules.",
+  "frontend/src/pages/AdminDashboard.tsx": "Admin-only dashboard with tabbed interface for managing shows and schedules with add/edit/delete capabilities.",
+  "frontend/src/components/ShowCard.tsx": "Reusable card component displaying show image, title, and description with hover effects.",
+  "frontend/src/components/ScheduleView.tsx": "Weekly schedule grid component organizing show times by day of week with formatted time display.",
+  "frontend/src/components/admin/ShowManagement.tsx": "Admin interface for managing shows with edit and delete actions, including confirmation dialogs.",
+  "frontend/src/components/admin/ScheduleManagement.tsx": "Admin interface for managing schedules organized by day with edit and delete functionality.",
+  "frontend/src/components/admin/AddShowDialog.tsx": "Dialog form for creating new shows with title, description, and image upload with progress tracking.",
+  "frontend/src/components/admin/EditShowDialog.tsx": "Dialog form for updating existing show information with optional image replacement.",
+  "frontend/src/components/admin/AddScheduleDialog.tsx": "Dialog form for creating new schedules with show selection, day, and time range inputs.",
+  "frontend/src/components/admin/EditScheduleDialog.tsx": "Dialog form for updating existing schedule information including show, day, and times.",
+  "frontend/src/index.css": "Global styles with warm country-themed OKLCH color system and custom marquee animation keyframes for the radio banner.",
+  "frontend/src/components/RadioBanner.tsx": "Horizontally scrolling banner component with marquee animation displaying radio streaming links for Live365 and GetMeRadio with warm amber background and bold country-style text.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme including custom marquee animation for the scrolling radio banner component."
+}

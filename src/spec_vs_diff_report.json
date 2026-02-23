@@ -1,0 +1,39 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T02:28:01.022Z",
+  "summary": "The diff shows only infrastructure changes (migration module and project state tracking) but does not implement the actual requirements. Neither the morning show entry (REQ-4) nor the weekday morning schedule entries (REQ-5) have been created. The backend/main.mo file appears truncated and shows only existing CRUD patterns without any new morning show data.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Create a new show entry for a morning show with ID, title, description, and optional image",
+      "reason": "No new show entry for a morning show was added to the backend shows stable variable. The diff shows no addShow() calls or initial data population for a morning show.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Add a weekday morning schedule entry for the new morning show with appropriate time slot (e.g., 6:00 AM - 10:00 AM)",
+      "reason": "No schedule entries for Monday through Friday morning time slots were created. The diff shows no addSchedule() calls or initial schedule data for weekday mornings.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Migration module infrastructure",
+      "reason": "A migration.mo module was added that defines data structures and a run function, but this was not requested in the BuildRequest. The requirement was to use existing data structures, not create migration infrastructure.",
+      "evidence": [
+        "backend/migration.mo"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "project_state.json"
+  ]
+}
